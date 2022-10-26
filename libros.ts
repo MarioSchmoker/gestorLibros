@@ -58,37 +58,37 @@ class GestorLibros{
       public getNombreLibro():string{
          return this.nombreLibro;
       }
-      public setNombreLibro(pNombreLibro):void{
+      public setNombreLibro(pNombreLibro: string):void{
          this.nombreLibro = pNombreLibro;
       } 
       public getAutor():string{
          return this.autor;
       }
-      public setAutor(pAutor):void{
+      public setAutor(pAutor: string):void{
          this.autor = pAutor;
       } 
       public getEditorial():string{
          return this.editorial;
       }
-      public setEditorial(pEditorial):void{
+      public setEditorial(pEditorial: string):void{
          this.editorial = pEditorial;
       } 
       public getEdicion():number{
          return this.edicion;
       }
-      public setEdicion(pEdicion):void{
+      public setEdicion(pEdicion: number):void{
          this.edicion = pEdicion;
       } 
       public getCantidadPaginas():number{
          return this.cantidadPaginas;
       }
-      public setCantidadPaginas(pCantidadPaginas):void{
+      public setCantidadPaginas(pCantidadPaginas: number):void{
          this.cantidadPaginas = pCantidadPaginas;
       } 
       public getCodigoIsbn():number{
          return this.codigoIsbn;
       }
-      public setCodigoIsbn(pCodigoIsbn):void{
+      public setCodigoIsbn(pCodigoIsbn: number):void{
          this.codigoIsbn = pCodigoIsbn;
       } 
       
@@ -102,7 +102,8 @@ class GestorLibros{
    
    let registroLibros: Libro[] = [libro1,libro2,libro3,libro4];
    console.log(libro2);
-   
+
+   let require : any;
    let readlineSync = require('readline-sync');
    let accion: Array<string> = ["Insertar Libro","Consultar Libro","Modificar Libro","Eliminar Libro"];
    let i = 0
@@ -130,7 +131,13 @@ class GestorLibros{
    }
 
    
-   
+//    import * as fs from 'fs';
+
+// let texto: string = fs.readFileSync('abc.txt', 'utf8');
+
+// let palabras: string[] = texto.split(' ');
+
+// console.log(palabras);
    
    
    
